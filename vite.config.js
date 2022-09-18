@@ -20,4 +20,5 @@ module.exports = defineConfig({
     },
   },
   plugins: [react()],
+  start: "vite --port $PORT"
 });
