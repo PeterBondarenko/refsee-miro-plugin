@@ -19,6 +19,5 @@ module.exports = defineConfig({
       input: allHtmlEntries,
     },
   },
-  plugins: [react()],
-  start: "vite --port $PORT"
+  plugins: [react()]
 });
