@@ -1,1 +1,1 @@
-web: npm run --host 0.0.0.0
+web: npm start --host 0.0.0.0
