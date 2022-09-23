@@ -4,6 +4,9 @@ import ReactDOM from "react-dom";
 import type { DropEvent } from "@mirohq/websdk-types";
 import { Event } from "typescript/lib/protocol";
 
+import logoUrl from './assets/refsee_logo.svg';
+import searchButtonUrl from './assets/search.svg';
+
 const { board } = miro;
 
 function App() {
@@ -62,7 +65,7 @@ function App() {
     fetch("https://refsee.com/api/smena/search", {
       method: "POST",
       headers: { "Content-Type": "application/json", "Authorization": "Basic c21lbmFfYXBpOnRFZFUzZ0ZAMkhqRGItY2p6Sk03UV94LUwuQnVIIUct" },
-      body: JSON.stringify({ "search_query": searchRequest })
+      body: JSON.stringify({ "search_query": searchRequest || ""})
     })
     .then(response => response.json().then(data => ({
           data: data,
@@ -93,7 +96,7 @@ function App() {
 
   return (
     <div className="main">
-      <a href={requestLink} target="_blank"><img className="refsee-logo" src="/src/assets/refsee_logo.svg" alt="" /></a>
+      <a href={requestLink} target="_blank"><img className="refsee-logo" src={logoUrl} alt="" /></a>
       <div className="headline">
             <p>AI-based video search engine</p>
       </div>
@@ -105,7 +108,7 @@ function App() {
           <div className="cs11 ce12 search-button-col">
             {/* <button type="submit" className="button-icon icon-search"></button> */}
             {/* <button type="submit" className="search-button button-primary"><div className="icon icon-search search-icon"></div></button> */}
-            <button type="submit" className="search-button button-primary"><img className="search-icon" src="/src/assets/search.svg"/></button>
+            <button type="submit" className="search-button button-primary"><img className="search-icon" src={searchButtonUrl}/></button>
           </div>
           </div>
       </form>
