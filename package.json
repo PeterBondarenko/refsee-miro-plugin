@@ -2,7 +2,6 @@
   "name": "refsee-service",
   "version": "0.0.1",
   "scripts": {
-    "prestart": "npm run build",
     "start": "vite --port $PORT",
     "build": "vite build",
     "serve": "vite preview"
