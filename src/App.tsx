@@ -65,7 +65,7 @@ function App() {
     fetch("https://refsee.com/api/smena/search", {
       method: "POST",
       headers: { "Content-Type": "application/json", "Authorization": "Basic c21lbmFfYXBpOnRFZFUzZ0ZAMkhqRGItY2p6Sk03UV94LUwuQnVIIUct" },
-      body: JSON.stringify({ "search_query": searchRequest || ""})
+      body: JSON.stringify({ "search_query": searchRequest || "white room"})
     })
     .then(response => response.json().then(data => ({
           data: data,
@@ -103,7 +103,7 @@ function App() {
       <form onSubmit={handleSubmit} className="input-form">
       <div className="grid">
           <div className="cs1 ce10">
-          <input type="text" className="input" placeholder="Any object, mood, color etc." id="search_req" name="req" value={searchRequest} onChange={handleChange}/>
+          <input type="text" className="input" placeholder="Any object, mood, color etc." id="search_req" name="req" value={searchRequest} onChange={handleChange} required/>
           </div>
           <div className="cs11 ce12 search-button-col">
             {/* <button type="submit" className="button-icon icon-search"></button> */}
