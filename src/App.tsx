@@ -65,9 +65,7 @@ function App() {
     fetch("https://refsee.com/api/smena/search", {
       method: "POST",
       headers: { "Content-Type": "application/json",
-      "Authorization": "Basic c21lbmFfYXBpOnRFZFUzZ0ZAMkhqRGItY2p6Sk03UV94LUwuQnVIIUct",
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Headers": "X-Requested-With"},
+      "Authorization": "Basic c21lbmFfYXBpOnRFZFUzZ0ZAMkhqRGItY2p6Sk03UV94LUwuQnVIIUct"},
       body: JSON.stringify({ "search_query": searchRequest || "white room"})
     })
     .then(response => response.json().then(data => ({
