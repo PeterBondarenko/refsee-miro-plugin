@@ -99,7 +99,7 @@ function App() {
     <div className="main">
       <a href={requestLink} target="_blank"><img className="refsee-logo" src={logoUrl} alt="" /></a>
       <div className="headline">
-            <p>AI-based video search engine</p>
+            <p>AI-powered video search engine</p>
       </div>
       <form onSubmit={handleSubmit} className="input-form">
       <div className="grid">
