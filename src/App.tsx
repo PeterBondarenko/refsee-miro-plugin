@@ -104,16 +104,16 @@ function App() {
       <form onSubmit={handleSubmit} className="input-form">
       <div className="grid">
           <div className="cs1 ce10">
-          <input type="text" className="input" autoFocus placeholder="Any object, mood, color etc." id="search_req" name="req" value={searchRequest} onChange={handleChange} required/>
+          <input type="text" className="input" autoFocus placeholder="Any object, mood, color etc." id="search_req" name="req" value={searchRequest} onChange={handleChange} tabIndex={0} required/>
           </div>
           <div className="cs11 ce12 search-button-col">
             {/* <button type="submit" className="button-icon icon-search"></button> */}
             {/* <button type="submit" className="search-button button-primary"><div className="icon icon-search search-icon"></div></button> */}
-            <button type="submit" className="search-button button-primary"><img className="search-icon" src={searchButtonUrl}/></button>
+            <button type="submit" className="search-button button-primary" tabIndex={1}><img className="search-icon" src={searchButtonUrl}/></button>
           </div>
           </div>
       </form>
-      <div className="grid results" id="refseeResult">
+      <div className="grid results" id="refseeResult" tabIndex={2}>
       <div className="lds-ring" style={{display: loader ? 'block' : 'none' }}>
       <div></div><div></div><div></div><div></div></div>
       
