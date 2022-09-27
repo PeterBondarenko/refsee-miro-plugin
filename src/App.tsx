@@ -109,22 +109,24 @@ function App() {
           <div className="cs11 ce12 search-button-col">
             {/* <button type="submit" className="button-icon icon-search"></button> */}
             {/* <button type="submit" className="search-button button-primary"><div className="icon icon-search search-icon"></div></button> */}
-            <button type="submit" className="search-button button-primary" tabIndex={1}><img className="search-icon" src={searchButtonUrl}/></button>
+            <button type="submit" className="search-button button-primary" tabIndex={0}><img className="search-icon" src={searchButtonUrl} alt={"Search"}/></button>
           </div>
           </div>
       </form>
-      <div className="grid results" id="refseeResult" tabIndex={2}>
+      <div className="grid results" id="refseeResult" tabIndex={0}>
       <div className="lds-ring" style={{display: loader ? 'block' : 'none' }}>
       <div></div><div></div><div></div><div></div></div>
       
       {images.map((image, index) => {
         return (
           <img
-            tabIndex={index+3}
+            tabIndex={0}
+            role={"button"}
             src={image}
             draggable={false}
             className={generateClassName(index+1)}
             key={index+1}
+            alt={searchRequest}
           />
         );
       })}
