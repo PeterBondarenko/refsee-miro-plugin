@@ -138,7 +138,7 @@ function App() {
         <div style={{display: loader ? 'block' : 'none' }}>Over 1 000 000 Video References</div>
       </div>
 
-      <a className="button goto-button" href={requestLink} target="_blank">{buttonCaption}</a>
+      <a className="button goto-button" href={requestLink} target="_blank" tabIndex={0}>{buttonCaption}</a>
       
       <div className="logline">
         <p className="p-small">All images and videos are copyrighted</p>
