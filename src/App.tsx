@@ -120,6 +120,7 @@ function App() {
       {images.map((image, index) => {
         return (
           <img
+            tabIndex={index+3}
             src={image}
             draggable={false}
             className={generateClassName(index+1)}
